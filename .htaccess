@@ -3,6 +3,7 @@
   RewriteBase /whatsis/
   
   # Si el archivo o directorio existe, servir directamente 1
+  #1
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   
