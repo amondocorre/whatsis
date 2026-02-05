@@ -1,0 +1,6 @@
+node_modules/
+.env
+whatsapp-sessions/
+uploads/
+*.log
+.DS_Store
