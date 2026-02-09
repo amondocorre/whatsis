@@ -5,12 +5,7 @@ const planController = {
     try {
       const plans = await Plan.findAll({
         where: { isActive: true },
-        order: [['maxMessagesMonth', 'ASC']],
-        include: [{
-          model: Company,
-          as: 'companies',
-          attributes: ['id', 'name', 'status']
-        }]
+        order: [['maxMessagesMonth', 'ASC']]
       });
 
       res.json({
@@ -18,6 +13,7 @@ const planController = {
         data: plans
       });
     } catch (error) {
+      console.error('Error al obtener planes:', error);
       next(error);
     }
   },
